@@ -1,7 +1,47 @@
 #include "tasks.h"
 
 
-void task_71a(void)
+void task_231_A(void) {
+    std::string strN;
+    std::cin >> strN;
+
+    try {
+        int n = std::stoi(strN);
+
+        if (n > 0) {
+            int numberCount = 3;
+            int count = 0;
+            std::string strNumbers;
+            std::vector<std::string> words;
+            std::string delimiter = " ";
+            size_t pos = 0;
+            std::string strNumber;
+
+            for (size_t i = 0; i < n; i++) {
+                int confidentCount = 0;
+                for (size_t j = 0; j < numberCount; j++) {
+                    std::cin >> strNumber;
+
+                    if (std::stoi(strNumber) == 1) {
+                        confidentCount++;
+                    }
+                }
+
+                if (confidentCount >= 2) {
+                    count++;
+                }
+            }
+
+            std::cout << count << std::endl;
+        }
+    }
+    catch (std::logic_error)
+    {
+        return;
+    }
+}
+
+void task_71_A(void)
 {
     std::string strN;
     std::cin >> strN;
@@ -41,7 +81,7 @@ void task_71a(void)
     }
 }
 
-void task_4a(void)
+void task_4_A(void)
 {
     std::string weightStr;
     std::cin >> weightStr;
