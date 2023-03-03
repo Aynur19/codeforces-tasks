@@ -1,5 +1,30 @@
 #include "tasks.h"
 
+void task_50_A(void) {
+    int minDim = 1;
+    int maxDim = 16;
+    int dominoSize = 2;
+
+    std::string strDim;
+
+    try {
+        std::cin >> strDim;
+        int m = std::stoi(strDim);
+
+        std::cin >> strDim;
+        int n = std::stoi(strDim);
+
+        if (m >= minDim && n <= maxDim && n >= m && n <= maxDim) {
+            int count = m * n / dominoSize;
+            std::cout << count << std::endl;
+        }
+    }
+    catch (std::logic_error)
+    {
+        return;
+    }
+}
+
 #pragma region Task 158 A
 int countNumbersMoreOrEqual(int iters, int min) {
     int count = 0;
