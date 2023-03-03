@@ -1,11 +1,13 @@
 ﻿#include "tasks.h"
-#include <iostream>
-#include <string>
-#include <vector>
+//#include <iostream>
+//#include <string>
+//#include <vector>
+
+
 
 
 int main()
 {
-    task_231_A();
+    task_158_A();
 }
 

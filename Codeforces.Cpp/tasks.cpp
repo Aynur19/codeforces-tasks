@@ -1,5 +1,57 @@
 #include "tasks.h"
 
+#pragma region Task 158 A
+int countNumbersMoreOrEqual(int iters, int min) {
+    int count = 0;
+    std::string strNumber;
+
+    for (size_t i = 0; i < iters; i++)
+    {
+        std::cin >> strNumber;
+
+        if (std::stoi(strNumber) > min) {
+            count++;
+        }
+        else {
+            break;
+        }
+    }
+
+    return count;
+}
+
+void task_158_A(void) {
+    std::string strNumber;
+    std::cin >> strNumber;
+
+    try {
+        int n = std::stoi(strNumber);
+
+        std::cin >> strNumber;
+        int k = std::stoi(strNumber);
+
+        if (k > 0 && n >= k) {
+            int count = 0;
+            count += countNumbersMoreOrEqual(k - 1, 0);
+
+            if (count == k - 1) {
+                std::cin >> strNumber;
+                int min = std::stoi(strNumber);
+
+                if (min > 0) {
+                    count += 1 + countNumbersMoreOrEqual(n - k, min - 1);
+                }
+            }
+
+            std::cout << count << std::endl;
+        }
+    }
+    catch (std::logic_error)
+    {
+        return;
+    }
+}
+#pragma endregion
 
 void task_231_A(void) {
     std::string strN;
