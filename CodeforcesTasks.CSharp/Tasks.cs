@@ -2,7 +2,42 @@
 
 public class Tasks
 {
-    public static void Task_71A()
+    public static void Task_231_A()
+    {
+        var strN = Console.ReadLine();
+        if (!int.TryParse(strN, out var n) || n <= 0)
+        {
+            return;
+        }
+
+        int numberCount = 3;
+        int count = 0;
+
+        for (int i = 0; i < n; i++)
+        {
+            var numbersStr = Console.ReadLine()?.Split(new char[] { ' ' });
+            int confidentCount = 0;
+            if (numbersStr is not null && numbersStr.Length >= numberCount)
+            {
+                for (int k = 0; k < numberCount; k++)
+                {
+                    if (int.TryParse(numbersStr[k], out var number) && number == 1)
+                    {
+                        confidentCount++;
+                    }
+                }
+
+                if (confidentCount >= 2)
+                {
+                    count++;
+                }
+            }
+        }
+
+        Console.WriteLine(count);
+    }
+
+    public static void Task_71_A()
     {
         var strN = Console.ReadLine();
         if (int.TryParse(strN, out var n))
@@ -27,7 +62,7 @@ public class Tasks
         }
     }
 
-    public static void Task_4A()
+    public static void Task_4_A()
     {
         var strWeight = Console.ReadLine();
         bool isNumber = int.TryParse(strWeight, out var weight);
