@@ -2,6 +2,22 @@
 
 public class Tasks
 {
+    public static void Task_50_A()
+    {
+        var minDim = 1;
+        var maxDim = 16;
+        var dominoSize = 2;
+        var dims = Console.ReadLine()?.Split(' ');
+
+        if (dims is not null && dims.Length >= 2
+            && int.TryParse(dims[0], out int m) && m >= minDim && m <= maxDim
+            && int.TryParse(dims[1], out int n) && n >= m && m <= maxDim)
+        {
+            int count = m * n / dominoSize;
+            Console.WriteLine(count);
+        }
+    }
+
     public static void Task_158_A()
     {
         var strNumbers = Console.ReadLine()?.Split(new char[] { ' ' });
