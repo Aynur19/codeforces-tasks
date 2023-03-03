@@ -1,5 +1,36 @@
 #include "tasks.h"
 
+void task_282_A(void) {
+    std::string operIncrement = "++";
+    std::string operDecrement = "--";
+    int x = 0;
+
+    try {
+        std::string strN;
+        std::string operation;
+
+        std::cin >> strN;
+        int n = std::stoi(strN);
+
+        for (size_t i = 0; i < n; i++)
+        {
+            std::cin >> operation;
+            if (operation.find(operDecrement) == std::string::npos) {
+                x++;
+            }
+            else {
+                x--;
+            }
+        }
+    }
+    catch (std::logic_error)
+    {
+        return;
+    }
+
+    std::cout << x;
+}
+
 void task_50_A(void) {
     int minDim = 1;
     int maxDim = 16;

@@ -8,6 +8,6 @@
 
 int main()
 {
-    task_50_A();
+    task_282_A();
 }
 
