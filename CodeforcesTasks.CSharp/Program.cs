@@ -4,6 +4,7 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        Tasks.Task_231_A();
+        
+        Tasks.Task_158_A();
     }
 }
