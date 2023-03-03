@@ -2,6 +2,33 @@
 
 public class Tasks
 {
+    public static void Task_263_A()
+    {
+        var dim = 5;
+        var searchValue = "1";
+        var count = 0;
+
+        for (int i = 0; i < dim; i++)
+        {
+            var numbers = Console.ReadLine()?.Split(' ');
+
+            if (count == 0 && numbers is not null && numbers.Contains(searchValue))
+            {
+                count += Math.Abs(i - 2);
+
+                for (int j = 0; j < dim; j++)
+                {
+                    if (numbers[j].Contains(searchValue))
+                    {
+                        count += Math.Abs(j - 2);
+                    }
+                }
+            }
+        }
+
+        Console.WriteLine(count);
+    }
+
     public static void Task_282_A()
     {
         var operIncrement = "++";
