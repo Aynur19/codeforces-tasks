@@ -15,11 +15,26 @@ public class Tasks
 
             if (strPoints is not null && strPoints.Length == n && int.TryParse(strPoints[k - 1], out int min))
             {
-                for (int i = 0; i < n; i++)
+                if (min > 0)
                 {
-                    if (int.TryParse(strPoints[i], out int point) && point >= min && point > 0)
+                    count += k;
+
+                    for (int i = k; i < n; i++)
                     {
-                        count++;
+                        if (int.TryParse(strPoints[i], out int point) && point >= min && point > 0)
+                        {
+                            count++;
+                        }
+                    }
+                }
+                else
+                {
+                    for (int i = k - 1; i >= 0; i--)
+                    {
+                        if (int.TryParse(strPoints[i], out int point) && point >= min && point > 0)
+                        {
+                            count++;
+                        }
                     }
                 }
             }
