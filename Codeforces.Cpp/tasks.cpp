@@ -1,7 +1,6 @@
 #include "tasks.h"
 
 void task_282_A(void) {
-    std::string operIncrement = "++";
     std::string operDecrement = "--";
     int x = 0;
 

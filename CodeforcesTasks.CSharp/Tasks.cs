@@ -2,6 +2,31 @@
 
 public class Tasks
 {
+    public static void Task_282_A()
+    {
+        var operIncrement = "++";
+        var x = 0;
+
+        var strN = Console.ReadLine();
+
+        if (strN is not null && int.TryParse(strN, out int n))
+        {
+            for (int i = 0; i < n; i++)
+            {
+                if (Console.ReadLine().Contains(operIncrement))
+                {
+                    x++;
+                }
+                else
+                {
+                    x--;
+                }
+            }
+        }
+
+        Console.WriteLine(x);
+    }
+
     public static void Task_50_A()
     {
         var minDim = 1;
