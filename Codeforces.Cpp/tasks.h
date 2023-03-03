@@ -3,6 +3,8 @@
 #include <string>
 #include <vector>
 
+void task_263_A(void);
+
 void task_282_A(void);
 
 void task_50_A(void);

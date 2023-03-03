@@ -1,5 +1,32 @@
 #include "tasks.h"
 
+void task_263_A(void) {
+    int dim = 5;
+    int count = 0;
+    std::string searchValue = "1";
+
+    try {
+        std::string strN;
+        int count = 0;
+        for (int i = 0; i < dim; i++)
+        {
+            for (int j = 0; j < dim; j++)
+            {
+                std::cin >> strN;
+                if (count == 0 && std::stoi(strN) == 1) {
+                    count = std::abs(i - 2) + std::abs(j - 2);
+                }
+            }
+        }
+
+        std::cout << count << std::endl;
+    }
+    catch (std::logic_error)
+    {
+        return;
+    }
+}
+
 void task_282_A(void) {
     std::string operDecrement = "--";
     int x = 0;
